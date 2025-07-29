@@ -35,4 +35,4 @@ async def task(procdata):
                 ) as client:  
             await client.publish("homeassistant/sensor/{}/config".format(id + "_level"),payload="{}".format(json.dumps(sensor_dict)),qos=1,retain=True)
 
-        await asyncio.sleep(30)
+        await asyncio.sleep(750)
