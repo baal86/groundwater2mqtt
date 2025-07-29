@@ -25,14 +25,13 @@ async def task(procdata):
                             # Find all data for each column
                             columns = row.find_all('td')
                             
-                            if(len(columns) == 4):
+                            if(len(columns) == 3):
                                 datum = columns[0].text.strip()
                                 levelNN = columns[1].text.strip()
                                 levelAbs = columns[2].text.strip()
-                                situation = columns[3].text.strip()
-                                rows += [(datum,levelNN,levelAbs,situation)]
+                                rows += [(datum,levelNN,levelAbs)]
                         if len(rows) > 0:
-                            _,level,_,_ = rows[0]
+                            _,level,_ = rows[0]
                             level = level.replace(",",".")
                             flevel = float(level)
                             pf = procdata["prefix"]
