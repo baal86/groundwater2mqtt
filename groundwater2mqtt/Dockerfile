@@ -3,9 +3,9 @@ FROM $BUILD_FROM
 
 RUN apk add --no-cache python3
 RUN apk add --no-cache py3-pip
-RUN pip install --break-system-packages pyasic
 RUN pip install --break-system-packages aiomqtt
 RUN pip install --break-system-packages beautifulsoup4
+RUN pip install --break-system-packages requests
 
 COPY service.py /
 COPY discovery.py /
