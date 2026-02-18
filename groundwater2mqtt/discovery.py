@@ -25,7 +25,7 @@ async def task(procdata):
             "unique_id": id + "_level",
             "state_topic": prefix + id + "/level",
             "unit_of_measurement": "m",
-            "device_class": "precipitation",
+            "device_class": "distance",
             "state_class": "measurement"
         }
         async with aiomqtt.Client(
