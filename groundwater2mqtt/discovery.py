@@ -25,6 +25,8 @@ async def task(procdata):
             "unique_id": id + "_level",
             "state_topic": prefix + id + "/level",
             "unit_of_measurement": "m",
+            "device_class": "precipitation",
+            "state_class": "measurement"
         }
         async with aiomqtt.Client(
                 hostname = procdata["server"],
