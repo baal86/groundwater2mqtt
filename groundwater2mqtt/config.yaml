@@ -1,6 +1,6 @@
 name: "Groundwater 2 MQTT"
 description: "Scrape ground water info from the web"
-version: "1.0.5"
+version: "1.0.6"
 slug: "groundwater2mqtt"
 init: false
 arch:
