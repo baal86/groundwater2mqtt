@@ -1,5 +1,5 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base:latest
+FROM ${BUILD_FROM}
 
 RUN apk add --no-cache python3
 RUN apk add --no-cache py3-pip
